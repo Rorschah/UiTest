@@ -27,5 +27,11 @@ namespace UnitTest1
         {
             throw new NotImplementedException();
         }
+
+        internal void OpenPreferencesWindow()
+        {
+            var preferencesButton = window.Get<Button>("PART_Options");
+            preferencesButton.Click();
+        }
     }
 }
