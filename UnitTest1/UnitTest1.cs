@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.CodeDom.Compiler;
 
 namespace UnitTest1
 {
@@ -27,25 +26,21 @@ namespace UnitTest1
         {
             MainWindow window = new MainWindow();
 
-            window.OpenPreferencesWindow();
 
-
-
-
-            // preferencesWindow.SwitchLanguage("Italian");
-
-            //preferencesWindow.ClickOnCancelButton();
 
 
             /////////////////////////////
             // Od Kuby
 
-            //PreferencesWindow preferencesWindow = window.OpenPreferencesWindow();
+            var preferencesWindow = window.OpenPreferencesWindow();
 
-            //preferencesWindow.SwitchLanguage("Italian");
+            preferencesWindow.SwitchLanguage("Italian");
+            preferencesWindow.SwitchLanguage(Language.English);
 
             //preferencesWindow.ClickOnCancelButton();
-            /////////////////////////////
+            ///////////////////////////
+
+
 
 
             //// Find the button
