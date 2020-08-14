@@ -24,21 +24,19 @@ namespace UnitTest1
         [TestMethod]
         public void TestMethod3()
         {
+
             MainWindow window = new MainWindow();
 
-
-
-
-            /////////////////////////////
-            // Od Kuby
-
+            // Open preferences window
             var preferencesWindow = window.OpenPreferencesWindow();
 
+            // Switch language
             preferencesWindow.SwitchLanguage("Italian");
-            preferencesWindow.SwitchLanguage(Language.English);
+            //preferencesWindow.SwitchLanguage(Language.English); // zkusit implementovat Enum --> blbuvzdorne
 
-            //preferencesWindow.ClickOnCancelButton();
-            ///////////////////////////
+            // Click on "Cancel"
+            preferencesWindow.ClickOnCancelButton();
+
 
 
 

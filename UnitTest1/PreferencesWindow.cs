@@ -6,7 +6,7 @@ using TestStack.White.UIItems.WindowItems;
 
 namespace UnitTest1
 {
-    // Enums for languages
+    // Enums for languages selection
     internal enum Language
     {
         Italian,
@@ -22,9 +22,13 @@ namespace UnitTest1
             this.preferencesWindow = preferencesWindow;
         }
 
-        internal void SwitchLanguage(Language language)
+        internal void SwitchLanguage(string language)
         {
             preferencesWindow.Get<ComboBox>("langSelCombo").Select(language);
+        }
+
+        internal void ClickOnCancelButton()
+        {
             preferencesWindow.Get<Button>(SearchCriteria.ByText("Cancel")).Click();
         }
     }
