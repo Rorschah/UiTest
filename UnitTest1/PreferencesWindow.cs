@@ -9,8 +9,19 @@ namespace UnitTest1
     // Enums for languages selection
     internal enum Language
     {
+        English,
+        Czech,
+        Chinese,
+        Dutch,
+        French,
+        German,
+        Hungarian,
         Italian,
-        English
+        Polish,
+        Romanian,
+        Slovak,
+        Spanish,
+        Russian,
     }
 
     internal class PreferencesWindow
@@ -22,9 +33,9 @@ namespace UnitTest1
             this.preferencesWindow = preferencesWindow;
         }
 
-        internal void SwitchLanguage(string language)
+        internal void SwitchLanguage(string Language)
         {
-            preferencesWindow.Get<ComboBox>("langSelCombo").Select(language);
+            preferencesWindow.Get<ComboBox>("langSelCombo").Select(Language);
         }
 
         internal void ClickOnCancelButton()

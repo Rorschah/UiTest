@@ -31,35 +31,10 @@ namespace UnitTest1
             var preferencesWindow = window.OpenPreferencesWindow();
 
             // Switch language
-            preferencesWindow.SwitchLanguage("Italian");
-            //preferencesWindow.SwitchLanguage(Language.English); // zkusit implementovat Enum --> blbuvzdorne
+            preferencesWindow.SwitchLanguage((Language.Italian).ToString()); // mohu vybrat jazyk dle "Enum"
 
             // Click on "Cancel"
             preferencesWindow.ClickOnCancelButton();
-
-
-
-
-
-            //// Find the button
-            //var preferencesButton = window.Get<Button>("PART_Options");
-
-            ////Click button
-            //preferencesButton.Click();
-
-            //// Find preferences window
-            //var preferencesWindow = Retry.For(
-            //    () => application.GetWindows().First(x => x.Id == "thisWindow"), TimeSpan.FromSeconds(5));
-
-            //// Find language --> select "Czech"
-            //preferencesWindow.Get<ComboBox>("langSelCombo").Select("Italian");
-
-            //// Preference window --> click button Cancel
-            //preferencesWindow.Get<Button>(SearchCriteria.ByText("Cancel")).Click();
-
-
-
-
 
         }
     }
