@@ -2,13 +2,14 @@
 using TestStack.White;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.WindowItems;
+using TestStack.White.Utility;
 
 namespace UnitTest1
 {
     internal class MainWindow
     {
         private readonly Window window;
-
+       
         public MainWindow()
         {
             var application = Application.Launch(@"C:\Program Files\IDEA StatiCa\StatiCa 20.0\IDEAStatiCa.exe");
@@ -31,7 +32,12 @@ namespace UnitTest1
         internal void OpenPreferencesWindow()
         {
             var preferencesButton = window.Get<Button>("PART_Options");
+
             preferencesButton.Click();
+
+            var preferencesWindow = Retry.For(
+            () => application.GetWindows().First(x => x.Id == "thisWindow"), TimeSpan.FromSeconds(5));
+
         }
     }
 }

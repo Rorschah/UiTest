@@ -27,12 +27,25 @@ namespace UnitTest1
         {
             MainWindow window = new MainWindow();
 
-            PreferencesWindow preferencesWindow = window.OpenPreferencesWindow();
+            window.OpenPreferencesWindow();
 
-            preferencesWindow.SwitchLanguage("Italian");
 
-            preferencesWindow.ClickOnCancelButton();
 
+
+            // preferencesWindow.SwitchLanguage("Italian");
+
+            //preferencesWindow.ClickOnCancelButton();
+
+
+            /////////////////////////////
+            // Od Kuby
+
+            //PreferencesWindow preferencesWindow = window.OpenPreferencesWindow();
+
+            //preferencesWindow.SwitchLanguage("Italian");
+
+            //preferencesWindow.ClickOnCancelButton();
+            /////////////////////////////
 
 
             //// Find the button
