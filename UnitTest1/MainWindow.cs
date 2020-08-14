@@ -2,6 +2,7 @@
 using System.Linq;
 using TestStack.White;
 using TestStack.White.UIItems;
+using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 using TestStack.White.Utility;
 
@@ -28,7 +29,8 @@ namespace UnitTest1
 
         internal void ClickOnSteelButton()
         {
-            throw new NotImplementedException();
+            var steelButton = window.Get<RadioButton>(SearchCriteria.ByText("STEEL"));
+            steelButton.Click();
         }
 
         internal PreferencesWindow OpenPreferencesWindow()
