@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestStack.White.UIItems.WindowItems;
 
 namespace AcceptanceTests
 {
@@ -18,41 +17,31 @@ namespace AcceptanceTests
         public void TearDown()
         {
             // Runs after each test. (Optional)
+            BlackApplicationHandler.StopAllInstances();
         }
 
 
 
         [TestMethod]
-        public void WhenLaunchingAppThenAppWindowOpens()
+        public void ShouldOpenMainWindowsOnApplicationStart()
         {
+            /// GIVEN
+
+            /// the "black application" is not running
+            /// 
+
+            /// WHEN
+
+            /// start the "black application"
             BlackApplicationInstance blackAplicationInstance = BlackApplicationHandler.StartNewInstance();
-            blackAplicationInstance.ClickOnCloseButton();
-        }
 
-        [TestMethod]
-        public void WhenAppWindowIsOpenedThenSteelButtonExists()
-        {
-            BlackApplicationInstance window = new BlackApplicationInstance();
+            /// THEN
+            /// 
 
-            window.ClickOnSteelButton();
-        }
-
-        [TestMethod]
-        public void WhenChangingLanguageThenLanguageIsChanged()
-        {
-
-            BlackApplicationInstance window = new BlackApplicationInstance();
-
-            // Open preferences window
-            var preferencesWindow = window.OpenPreferencesWindow();
-
-            // Switch language
-            preferencesWindow.SwitchLanguage(Language.French); // mohu vybrat jazyk dle "Enum"
-
-            // Click on "Cancel"
-            preferencesWindow.ClickOnCancelButton();
-
-            
+            /// check the main window has menu for Steel, Concrete and BIM
+            blackAplicationInstance.CheckMainWindowsHasTheSteelButton();
+            blackAplicationInstance.CheckMainWindowsHasTheConcreteButton();
+            blackAplicationInstance.CheckMainWindowsHasTheBimButton();
         }
     }
 }

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestStack.White;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
-using TestStack.White.Utility;
 
 namespace AcceptanceTests
 {
@@ -19,31 +17,23 @@ namespace AcceptanceTests
 
             window = application.GetWindow("IDEA StatiCa");
         }
-              
 
-        internal void ClickOnCloseButton()
-        {
-            var closeButton = window.Get<Button>("PART_Close");
-
-            closeButton.Click();
-        }
-
-        internal void ClickOnSteelButton()
+        internal void CheckMainWindowsHasTheSteelButton()
         {
             var steelButton = window.Get<RadioButton>(SearchCriteria.ByText("STEEL"));
-            steelButton.Click();
+            Assert.IsNotNull(steelButton);
         }
 
-        internal PreferencesWindow OpenPreferencesWindow()
+        internal void CheckMainWindowsHasTheConcreteButton()
         {
-            // Open prefences window
-            var preferencesButton = window.Get<Button>("PART_Options");
-            preferencesButton.Click();
-            var preferencesWindow = Retry.For(
-                () => application.GetWindows().First(x => x.Id == "thisWindow"), TimeSpan.FromSeconds(5));
+            var concreteButton = window.Get<RadioButton>(SearchCriteria.ByText("CONCRETE"));
+            Assert.IsNotNull(concreteButton);
+        }
 
-
-            return new PreferencesWindow(preferencesWindow); // vraceni noveho objektu, aniz bych ho musel priradit do nove promenne
+        internal void CheckMainWindowsHasTheBimButton()
+        {
+            var bimButton = window.Get<RadioButton>(SearchCriteria.ByText("BIM"));
+            Assert.IsNotNull(bimButton);
         }
     }
 }
