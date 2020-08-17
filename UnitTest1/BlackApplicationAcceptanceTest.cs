@@ -20,10 +20,8 @@ namespace AcceptanceTests
             BlackApplicationHandler.StopAllInstances();
         }
 
-
-
         [TestMethod]
-        public void ShouldOpenMainWindowsOnApplicationStart()
+        public void ShouldOpenMainWindowOnApplicationStart()
         {
             /// GIVEN
 
@@ -39,9 +37,9 @@ namespace AcceptanceTests
             /// 
 
             /// check the main window has menu for Steel, Concrete and BIM
-            blackAplicationInstance.CheckMainWindowsHasTheSteelButton();
-            blackAplicationInstance.CheckMainWindowsHasTheConcreteButton();
-            blackAplicationInstance.CheckMainWindowsHasTheBimButton();
+            blackAplicationInstance.CheckMainWindowHasTheSteelButton();
+            blackAplicationInstance.CheckMainWindowHasTheConcreteButton();
+            blackAplicationInstance.CheckMainWindowHasTheBimButton();
         }
     }
 }

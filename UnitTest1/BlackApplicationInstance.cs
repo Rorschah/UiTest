@@ -18,19 +18,19 @@ namespace AcceptanceTests
             window = application.GetWindow("IDEA StatiCa");
         }
 
-        internal void CheckMainWindowsHasTheSteelButton()
+        internal void CheckMainWindowHasTheSteelButton()
         {
             var steelButton = window.Get<RadioButton>(SearchCriteria.ByText("STEEL"));
             Assert.IsNotNull(steelButton);
         }
 
-        internal void CheckMainWindowsHasTheConcreteButton()
+        internal void CheckMainWindowHasTheConcreteButton()
         {
             var concreteButton = window.Get<RadioButton>(SearchCriteria.ByText("CONCRETE"));
             Assert.IsNotNull(concreteButton);
         }
 
-        internal void CheckMainWindowsHasTheBimButton()
+        internal void CheckMainWindowHasTheBimButton()
         {
             var bimButton = window.Get<RadioButton>(SearchCriteria.ByText("BIM"));
             Assert.IsNotNull(bimButton);
