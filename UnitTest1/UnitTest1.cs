@@ -6,7 +6,7 @@ namespace UnitTest1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void WhenLaunchingAppThenAppWindowOpens()
         {
             MainWindow window = new MainWindow();
 
@@ -14,7 +14,7 @@ namespace UnitTest1
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void WhenAppWindowIsOpenedThenSteelButtonExists()
         {
             MainWindow window = new MainWindow();
 
@@ -22,7 +22,7 @@ namespace UnitTest1
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void WhenChangingLanguageThenLanguageIsChanged()
         {
 
             MainWindow window = new MainWindow();
@@ -31,11 +31,12 @@ namespace UnitTest1
             var preferencesWindow = window.OpenPreferencesWindow();
 
             // Switch language
-            preferencesWindow.SwitchLanguage((Language.Italian).ToString()); // mohu vybrat jazyk dle "Enum"
+            preferencesWindow.SwitchLanguage(Language.French); // mohu vybrat jazyk dle "Enum"
 
             // Click on "Cancel"
             preferencesWindow.ClickOnCancelButton();
 
+            
         }
     }
 }

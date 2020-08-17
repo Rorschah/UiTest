@@ -33,9 +33,9 @@ namespace UnitTest1
             this.preferencesWindow = preferencesWindow;
         }
 
-        internal void SwitchLanguage(string Language)
+        internal void SwitchLanguage(Language language)
         {
-            preferencesWindow.Get<ComboBox>("langSelCombo").Select(Language);
+            preferencesWindow.Get<ComboBox>("langSelCombo").Select((int)language);
         }
 
         internal void ClickOnCancelButton()
