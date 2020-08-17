@@ -6,7 +6,7 @@ using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 using TestStack.White.Utility;
 
-namespace UnitTest1
+namespace AcceptanceTests
 {
     internal class BlackApplicationInstance
     {

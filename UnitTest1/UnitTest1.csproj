@@ -58,7 +58,7 @@
     <Compile Include="BlackApplicationHandler.cs" />
     <Compile Include="BlackApplicationInstance.cs" />
     <Compile Include="PreferencesWindow.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="BlackApplicationAcceptanceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

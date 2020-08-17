@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace UnitTest1
+namespace AcceptanceTests
 {
     class BlackApplicationHandler
     {

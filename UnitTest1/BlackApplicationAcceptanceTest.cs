@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestStack.White.UIItems.WindowItems;
 
-namespace UnitTest1
+namespace AcceptanceTests
 {
     [TestClass]
-    public class UnitTest1
+    public class BlackApplicationAcceptanceTest
     {
 
         [TestInitialize]
