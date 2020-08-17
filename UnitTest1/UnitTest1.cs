@@ -1,16 +1,32 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TestStack.White.UIItems.WindowItems;
 
 namespace UnitTest1
 {
     [TestClass]
     public class UnitTest1
     {
+
+        [TestInitialize]
+        public void Setup()
+        {
+            // Runs before each test. (Optional)
+            BlackApplicationHandler.StopAllInstances();
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            // Runs after each test. (Optional)
+        }
+
+
+
         [TestMethod]
         public void WhenLaunchingAppThenAppWindowOpens()
         {
-            BlackApplicationInstance window = new BlackApplicationInstance();
-
-            window.ClickOnCloseButton();
+            BlackApplicationInstance blackAplicationInstance = BlackApplicationHandler.StartNewInstance();
+            blackAplicationInstance.ClickOnCloseButton();
         }
 
         [TestMethod]

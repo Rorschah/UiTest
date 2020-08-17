@@ -19,6 +19,7 @@ namespace UnitTest1
 
             window = application.GetWindow("IDEA StatiCa");
         }
+              
 
         internal void ClickOnCloseButton()
         {
