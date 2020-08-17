@@ -8,12 +8,12 @@ using TestStack.White.Utility;
 
 namespace UnitTest1
 {
-    internal class MainWindow
+    internal class BlackApplicationInstance
     {
         private readonly Window window;
         private readonly Application application;
 
-        public MainWindow()
+        public BlackApplicationInstance()
         {
             application = Application.Launch(@"C:\Program Files\IDEA StatiCa\StatiCa 20.0\IDEAStatiCa.exe");
 

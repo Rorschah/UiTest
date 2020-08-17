@@ -8,7 +8,7 @@ namespace UnitTest1
         [TestMethod]
         public void WhenLaunchingAppThenAppWindowOpens()
         {
-            MainWindow window = new MainWindow();
+            BlackApplicationInstance window = new BlackApplicationInstance();
 
             window.ClickOnCloseButton();
         }
@@ -16,7 +16,7 @@ namespace UnitTest1
         [TestMethod]
         public void WhenAppWindowIsOpenedThenSteelButtonExists()
         {
-            MainWindow window = new MainWindow();
+            BlackApplicationInstance window = new BlackApplicationInstance();
 
             window.ClickOnSteelButton();
         }
@@ -25,7 +25,7 @@ namespace UnitTest1
         public void WhenChangingLanguageThenLanguageIsChanged()
         {
 
-            MainWindow window = new MainWindow();
+            BlackApplicationInstance window = new BlackApplicationInstance();
 
             // Open preferences window
             var preferencesWindow = window.OpenPreferencesWindow();
